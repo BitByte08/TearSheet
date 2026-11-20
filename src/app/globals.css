@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "@team-carol/design-system/tailwind.css";
+/* components.css 는 반드시 tailwindcss 뒤에 (preflight 가 버튼 배경을 지우지 않도록) */
+@import "@team-carol/design-system/components.css" layer(components);
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-canvas);
+  color: var(--color-ink-soft);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
